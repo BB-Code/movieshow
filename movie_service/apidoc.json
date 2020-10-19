@@ -1,0 +1,8 @@
+{
+  "name": "movie_service",
+  "version": "1.0.0",
+  "description": "movie_service项目API文档",
+  "title": "movie_service API",
+  "url": "http://localhost:3000",
+  "forceLanguage": "zh-cn"
+}
