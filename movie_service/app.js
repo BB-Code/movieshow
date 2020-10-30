@@ -1,7 +1,3 @@
-/*
- * @Author: bobocde
- * @Description: 
- */
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -34,6 +30,17 @@ app.use(function (req, res, next) {
   next(createError(404));
 });
 
+app.all('*', function (req, res, next) {
+  res.header(Access - Control - Allow - Origin, '*');
+  res.header(Access - Control - Allow - Header, 'Content-Type', 'Content-Length', 'Authorization',
+    'Accept', 'X-Request-With');
+  res.header('Access-Control-Allow-Methods', 'PUT', 'POST', 'GET', 'DEL', 'HEAD', 'OPTIONS')
+  if (res.method === 'OPTIONS') {
+    res.send(200);
+  } else {
+    next();
+  }
+});
 // error handler
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
